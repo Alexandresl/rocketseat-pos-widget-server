@@ -1,4 +1,4 @@
-FROM node:20.18 AS base
+FROM node:24 AS base
 
 RUN npm i -g pnpm
 
@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN pnpm install
+RUN pnpm install --dangerously-allow-all-builds
 
 FROM base AS build
 
