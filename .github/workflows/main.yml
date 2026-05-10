@@ -30,5 +30,5 @@ jobs:
         id: build-push-image
         run: |
           docker build -t widget-server:v3 .
-          docker tag widget-server:v3 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server
-          docker push 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server
+          docker tag widget-server:v3 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server:v3
+          docker push 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server:v3
