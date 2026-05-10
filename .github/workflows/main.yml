@@ -25,3 +25,10 @@ jobs:
       - name: Login to AWS ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push the image to AWS ECR
+        id: build-push-image
+        run: |
+          docker bukld -t widget-server:v3
+          docker tag widget-server:v3 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server
+          docker push 776051122812.dkr.ecr.us-east-2.amazonaws.com/al3xandr3sl/widget-server
