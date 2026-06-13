@@ -6,7 +6,7 @@ import type { FastifyInstance } from "fastify";
 export async function healthCheckRoute(app: FastifyInstance) {
   app.get('/health', async (request, reply) => {
     await reply.status(200).send({
-      message: 'Tudo Ok agora no ECS IAC!'
+      message: 'Tudo Ok agora no ECS IAC!!!'
     })
   })
 }
